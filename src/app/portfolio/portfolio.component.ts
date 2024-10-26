@@ -66,7 +66,7 @@ export class PortfolioComponent implements OnInit {
     const windowHeight = window.innerHeight;
 
     // Vérifiez si la section est visible
-    if (sectionTop < windowHeight * 0.8) {
+    if (sectionTop < windowHeight * 0.55) {
       portfolioSection.classList.add('visible'); // Rendre visible
     } else {
       portfolioSection.classList.remove('visible'); // Masquer

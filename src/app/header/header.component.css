@@ -15,7 +15,7 @@
 
 .profile {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .profile-photo {
@@ -24,12 +24,12 @@
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #f5f5f5;
-  margin-bottom: 5px; /* Espacement entre la photo et le nom */
+  margin-bottom: 2px; /* Espacement entre la photo et le nom */
 }
 
 .sidebar h2 {
   margin: 0 2px;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: bold;
   letter-spacing: 0.5px;
 }

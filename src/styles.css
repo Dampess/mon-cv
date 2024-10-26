@@ -1,4 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+background: linear-gradient(135deg, #2e2e2e, #3a3a3a) }
+
+/* Pour Chrome, Safari et Opera */
+::-webkit-scrollbar {
+  width: 12px; /* Largeur de la scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #2c2c2c; /* Couleur de fond de la track */
+  border-radius: 10px; /* Coins arrondis */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFD700; /* Couleur de la thumb (partie qui défile) */
+  border-radius: 10px; /* Coins arrondis */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFC107; /* Couleur au survol */
+}
+
+/* Pour Firefox */
+* {
+  scrollbar-width: thin; /* Épaisseur de la scrollbar */
+  scrollbar-color: #FFD700 #2c2c2c; /* Couleur de la thumb et de la track */
+}

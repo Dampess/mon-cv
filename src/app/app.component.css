@@ -11,7 +11,7 @@
 
 /* Mise en page principale */
 main {
-  background: linear-gradient(135deg, #2e2e2e, #3a3a3a);
+  background: linear-gradient(135deg, #2e2e2e, #3a3a3a)
 }
 
 .main-content {
@@ -21,16 +21,11 @@ main {
   padding-left: 1rem;
 }
 
-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
 /* Contenu et sections */
 .content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+
 }
 
 section {

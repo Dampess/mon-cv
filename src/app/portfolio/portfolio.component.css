@@ -3,9 +3,7 @@
   margin: 40px auto; /* Centrer avec auto marges pour la responsivité */
   max-width: 1200px; /* Largeur maximale pour le composant */
   padding: 20px; /* Espacement interne */
-  background-color: #1a1a1a; /* Fond sombre pour contraster avec les images */
   border-radius: 10px; /* Arrondir les coins du conteneur */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Ombre pour donner de la profondeur */
   opacity: 0; /* Commence invisible */
   transform: translateY(30px); /* Décalage pour l'effet de montée */
   transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transition pour apparition */
@@ -30,7 +28,6 @@
 }
 
 .carousel-caption {
-  background: rgba(0, 0, 0, 0.7); /* Fond plus sombre pour un meilleur contraste */
   color: white;
   padding: 20px;
   border-radius: 8px;

@@ -17,11 +17,12 @@
   font-size: 28px; /* Taille du titre augmentée */
   margin-bottom: 30px; /* Espacement sous le titre */
   text-transform: uppercase; /* Mettre en majuscules pour un style moderne */
+  letter-spacing: 1px; /* Espacement des lettres pour un style moderne */
 }
 
 .skills-container {
   display: grid; /* Utiliser une grille pour l'affichage des cartes */
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Nombre de colonnes flexibles */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Nombre de colonnes flexibles */
   gap: 20px; /* Espacement entre les cartes */
 }
 
@@ -33,6 +34,15 @@
   transition: transform 0.3s, box-shadow 0.3s; /* Effet d'animation */
   position: relative; /* Pour un meilleur contrôle de l'élévation */
   overflow: hidden; /* Pour cacher le débordement */
+  display: flex; /* Utiliser flexbox pour l'alignement des éléments */
+  flex-direction: column; /* Orienter les éléments verticalement */
+  align-items: center; /* Centrer les éléments horizontalement */
+}
+
+.skill-card i {
+  font-size: 40px; /* Taille des icônes */
+  margin-bottom: 10px; /* Espacement sous l'icône */
+  color: #FFD700; /* Couleur dorée pour l'icône */
 }
 
 .skill-card h3 {
@@ -76,5 +86,9 @@
 
   .skill-card h3 {
     font-size: 18px; /* Réduire la taille des sous-titres sur mobile */
+  }
+
+  .skill-card i {
+    font-size: 30px; /* Réduire la taille des icônes sur mobile */
   }
 }

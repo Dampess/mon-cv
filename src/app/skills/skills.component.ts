@@ -24,7 +24,7 @@ export class SkillsComponent implements OnInit {
     const windowHeight = window.innerHeight;
 
     // Vérifiez si la section est visible
-    if (sectionTop < windowHeight * 0.8) {
+    if (sectionTop < windowHeight * 0.55) {
       skillsSection.classList.add('visible'); // Rendre visible
     } else {
       skillsSection.classList.remove('visible'); // Masquer
