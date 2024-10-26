@@ -5,28 +5,32 @@ import { Component, HostListener, OnInit } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './hero.component.html',
-  styleUrl: './hero.component.css',
+  styleUrls: ['./hero.component.css'],
 })
 export class HeroComponent implements OnInit {
-  isVisible: boolean = false;
+  scrollY: number = 0;
 
   ngOnInit() {
-    this.checkVisibility();
+    this.updateHeroOpacity();
   }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.checkVisibility();
+    this.updateHeroOpacity();
   }
 
-  private checkVisibility() {
+  private updateHeroOpacity() {
     const heroSection = document.getElementById('hero');
     if (heroSection) {
-      const rect = heroSection.getBoundingClientRect();
-      if (rect.top < window.innerHeight) {
-        this.isVisible = true;
-        heroSection.style.opacity = '1';
-      }
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const heroHeight = heroSection.offsetHeight;
+
+      // Réduisez l'opacité et appliquez la translation vers le haut en fonction du défilement
+      const opacity = Math.max(0, 1 - scrollTop / (heroHeight * 0.5));
+      const translateY = Math.min(100, scrollTop / 4);
+
+      heroSection.style.opacity = opacity.toString();
+      heroSection.style.transform = `translateY(-${translateY}px)`;
     }
   }
 }

@@ -1,7 +1,15 @@
 .experience {
-  padding: 40px; /* Espacement intérieur augmenté */
-  margin-bottom: 40px; /* Espacement entre les sections */
-  color: white; /* Couleur du texte */
+  padding: 40px;
+  color: white;
+  min-height: 100vh;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.experience.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .experience h2 {
@@ -25,12 +33,26 @@
 }
 
 .timeline-content {
-  background: rgba(0, 0, 0, 0.7); /* Fond des éléments de chronologie */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.9s ease-out, transform 0.5s ease-out;
+   background: rgba(0, 0, 0, 0.7); /* Fond des éléments de chronologie */
   border-radius: 8px; /* Coins arrondis */
   padding: 20px; /* Espacement intérieur augmenté */
   color: white; /* Couleur du texte */
   width: 45%; /* Largeur de l'élément de chronologie */
-  transition: transform 0.3s, box-shadow 0.3s; /* Effet d'animation */
+}
+
+/* Visible au scroll */
+.timeline-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Disparaît quand on descend */
+.timeline-content.disappearing {
+  opacity: 0;
+  transform: translateY(-20px);
 }
 
 .timeline-item:hover .timeline-content {

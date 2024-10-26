@@ -1,39 +1,52 @@
 .about {
-  padding: 40px 20px; /* Espacement intérieur augmenté */
-  margin-bottom: 40px; /* Espacement entre les sections */
-  color: white; /* Couleur du texte */
-  min-height: 100vh; /* Hauteur minimale de la section */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre pour un effet de profondeur */
-  display: flex; /* Utiliser Flexbox pour centrer le contenu */
-  flex-direction: column; /* Disposition en colonne */
-  justify-content: center; /* Centrer verticalement */
-  text-align: center; /* Centrer le texte */
+  padding: 40px 20px;
+  color: white;
+  min-height: 100vh;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .about h2 {
-  font-size: 28px; /* Taille du titre augmentée */
-  margin-bottom: 20px; /* Espacement sous le titre */
-  text-transform: uppercase; /* Mettre en majuscules pour un style moderne */
-  letter-spacing: 1px; /* Espacement des lettres */
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .about p {
-  line-height: 1.6; /* Espacement entre les lignes */
-  margin: 15px 0; /* Espacement vertical des paragraphes */
-  font-size: 16px; /* Taille de la police augmentée pour une meilleure lisibilité */
-  max-width: 800px; /* Largeur maximale pour une meilleure lisibilité */
-  margin-left: auto; /* Centrer horizontalement */
-  margin-right: auto; /* Centrer horizontalement */
+  line-height: 1.6;
+  margin: 15px 0;
+  font-size: 16px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation pour l'effet de disparition au défilement */
+.about.disappearing {
+  opacity: 0;
+  transform: translateY(-20px); /* Décalage vers le haut pour l'effet de disparition */
 }
 
 /* Responsivité */
 @media (max-width: 768px) {
   .about h2 {
-    font-size: 24px; /* Taille de titre réduite sur mobile */
+    font-size: 24px;
   }
 
   .about p {
-    font-size: 14px; /* Taille de police réduite sur mobile */
-    margin: 10px 20px; /* Ajustement de l'espacement sur mobile */
+    font-size: 14px;
+    margin: 10px 20px;
   }
 }

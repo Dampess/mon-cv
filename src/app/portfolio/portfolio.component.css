@@ -6,6 +6,14 @@
   background-color: #1a1a1a; /* Fond sombre pour contraster avec les images */
   border-radius: 10px; /* Arrondir les coins du conteneur */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Ombre pour donner de la profondeur */
+  opacity: 0; /* Commence invisible */
+  transform: translateY(30px); /* Décalage pour l'effet de montée */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transition pour apparition */
+}
+
+.portfolio.visible {
+  opacity: 1; /* Rendre visible */
+  transform: translateY(0); /* Remettre à la position initiale */
 }
 
 .project-image {

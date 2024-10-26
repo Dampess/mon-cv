@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component, HostListener, OnInit, ElementRef } from '@angular/core';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
 
@@ -7,9 +7,9 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule, NgbCarouselModule],
   templateUrl: './portfolio.component.html',
-  styleUrl: './portfolio.component.css',
+  styleUrls: ['./portfolio.component.css'],
 })
-export class PortfolioComponent {
+export class PortfolioComponent implements OnInit {
   projects = [
     {
       title: 'LouhaneMakeupArt',
@@ -48,4 +48,28 @@ export class PortfolioComponent {
       link: 'https://dampess.github.io/Kandian-projet-Vue.js-/',
     },
   ];
+
+  constructor(private el: ElementRef) {}
+
+  ngOnInit(): void {
+    this.handleScroll(); // Vérifie la visibilité lors de l'initialisation
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    this.handleScroll(); // Écouteur de défilement
+  }
+
+  private handleScroll(): void {
+    const portfolioSection = this.el.nativeElement.querySelector('.portfolio');
+    const sectionTop = portfolioSection.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    // Vérifiez si la section est visible
+    if (sectionTop < windowHeight * 0.8) {
+      portfolioSection.classList.add('visible'); // Rendre visible
+    } else {
+      portfolioSection.classList.remove('visible'); // Masquer
+    }
+  }
 }
