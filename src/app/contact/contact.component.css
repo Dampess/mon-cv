@@ -1,0 +1,55 @@
+.contact {
+  text-align: center;
+  margin: 40px auto; /* Centrer avec auto marges pour la responsivité */
+  max-width: 600px; /* Largeur maximale pour le composant */
+  padding: 20px; /* Espacement interne */
+}
+
+.contact-info {
+  margin-bottom: 30px; /* Espacement plus important entre les sections */
+}
+
+.contact-info p {
+  font-size: 18px; /* Augmenter la taille de la police pour une meilleure lisibilité */
+  margin: 10px 0; /* Espacement entre les lignes */
+  line-height: 1.6; /* Espacement entre les lignes */
+  color: #f0f0f0; /* Couleur du texte pour un bon contraste */
+}
+
+.social-media {
+  margin-top: 30px; /* Espacement supérieur pour la section des réseaux sociaux */
+}
+
+.social-media h3 {
+  margin-bottom: 10px; /* Espacement inférieur pour le titre */
+  font-size: 22px; /* Taille de police pour le titre des réseaux sociaux */
+  color: #fff; /* Couleur blanche pour le titre */
+}
+
+.social-media a {
+  margin: 0 15px; /* Espacement entre les liens */
+  text-decoration: none;
+  color: #007bff; /* Couleur des liens */
+  font-weight: 600; /* Gras pour un effet visuel */
+  transition: color 0.3s; /* Transition pour l'effet hover */
+}
+
+.social-media a:hover {
+  color: #0056b3; /* Couleur au survol */
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  .contact {
+    margin: 20px; /* Moins d'espace sur mobile */
+    padding: 15px; /* Réduire le padding sur mobile */
+  }
+
+  .contact-info p {
+    font-size: 16px; /* Ajuster la taille de la police sur mobile */
+  }
+
+  .social-media h3 {
+    font-size: 20px; /* Réduire la taille de la police du titre sur mobile */
+  }
+}

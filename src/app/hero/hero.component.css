@@ -1,0 +1,63 @@
+.hero {
+  background: linear-gradient(to right, rgba(25, 25, 25, 0.8), rgba(0, 0, 0, 0.8)), 
+              url('/assets/images/bg-img.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; /* Parallax effect */
+  color: white;
+  height: 100vh; /* Prend toute la hauteur de l'écran */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrage vertical */
+  align-items: center; /* Centrage horizontal */
+  text-align: center;
+  opacity: 0; /* Commence invisible pour l'animation */
+  transition: opacity 0.5s ease-in;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 600px;
+  animation: fadeIn 1s forwards;
+}
+
+/* Animation d'apparition au défilement */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .cta-button {
+    padding: 8px 16px;
+  }
+}

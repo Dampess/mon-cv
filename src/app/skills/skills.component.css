@@ -1,0 +1,71 @@
+.skills {
+  padding: 40px 20px; /* Espacement interne */
+  margin-bottom: 40px; /* Espacement sous le composant */
+  color: white; /* Couleur du texte */
+  text-align: center; /* Centrer le texte */
+}
+
+.skills h2 {
+  font-size: 28px; /* Taille du titre augmentée */
+  margin-bottom: 30px; /* Espacement sous le titre */
+  text-transform: uppercase; /* Mettre en majuscules pour un style moderne */
+}
+
+.skills-container {
+  display: grid; /* Utiliser une grille pour l'affichage des cartes */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Nombre de colonnes flexibles */
+  gap: 20px; /* Espacement entre les cartes */
+}
+
+.skill-card {
+  background-color: rgba(255, 255, 255, 0.1); /* Fond léger pour les cartes */
+  border-radius: 8px; /* Coins arrondis */
+  padding: 20px; /* Espacement interne */
+  transition: transform 0.3s, box-shadow 0.3s; /* Effet d'animation */
+  position: relative; /* Pour un meilleur contrôle de l'élévation */
+  overflow: hidden; /* Pour cacher le débordement */
+}
+
+.skill-card h3 {
+  margin-bottom: 10px; /* Espacement sous le sous-titre */
+  font-size: 20px; /* Taille du sous-titre */
+  color: #FFD700; /* Couleur dorée pour le sous-titre */
+}
+
+.skill-card:hover {
+  transform: translateY(-5px); /* Légère élévation au survol */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Ombre au survol */
+}
+
+/* Ajout d'un effet d'ombre douce */
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 215, 0, 0.1); /* Couleur dorée avec transparence */
+  border-radius: 8px; /* Coins arrondis */
+  opacity: 0; /* Initialement invisible */
+  transition: opacity 0.3s; /* Transition pour l'effet */
+}
+
+.skill-card:hover::before {
+  opacity: 1; /* Visible au survol */
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  .skills {
+    padding: 20px; /* Moins d'espace sur mobile */
+  }
+
+  .skills h2 {
+    font-size: 24px; /* Réduire la taille du titre sur mobile */
+  }
+
+  .skill-card h3 {
+    font-size: 18px; /* Réduire la taille des sous-titres sur mobile */
+  }
+}

@@ -1,0 +1,67 @@
+.portfolio {
+  text-align: center;
+  margin: 40px auto; /* Centrer avec auto marges pour la responsivité */
+  max-width: 1200px; /* Largeur maximale pour le composant */
+  padding: 20px; /* Espacement interne */
+  background-color: #1a1a1a; /* Fond sombre pour contraster avec les images */
+  border-radius: 10px; /* Arrondir les coins du conteneur */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Ombre pour donner de la profondeur */
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s, filter 0.3s; /* Transition pour un effet au survol */
+  object-fit: cover; /* Assurer le bon aspect ratio des images */
+}
+
+.project-image:hover {
+  transform: scale(1.05); /* Zoom léger au survol */
+  filter: brightness(0.9); /* Assombrir légèrement l'image au survol */
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.7); /* Fond plus sombre pour un meilleur contraste */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  position: absolute; /* Positionnement absolu pour le texte */
+  bottom: 10%; /* Position en bas de l'image */
+  left: 50%; /* Centrer horizontalement */
+  transform: translateX(-50%); /* Ajustement de la position */
+  transition: opacity 0.3s; /* Transition pour le changement d'opacité */
+  width: 90%; /* Largeur adaptable pour la légende */
+}
+
+@media (max-width: 768px) {
+  .portfolio {
+    margin: 20px; /* Moins d'espace sur mobile */
+    padding: 15px; /* Réduire le padding sur mobile */
+  }
+
+  .project-image {
+    max-height: 300px; /* Limiter la hauteur des images sur mobile */
+  }
+
+  .carousel-caption {
+    padding: 15px; /* Réduire le padding sur mobile */
+    font-size: 0.9rem; /* Réduire la taille de la police sur mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio {
+    margin: 0; /* Moins d'espace sur mobile */
+    padding: 0; /* Réduire le padding sur mobile */
+  }
+
+  .carousel-caption {
+    padding: 5px; /* Réduire le padding sur petits écrans */
+    font-size: 0.8rem; /* Réduire la taille de la police sur petits écrans */
+  }
+
+  .project-image {
+    max-height: 500px; /* Limiter la hauteur des images sur très petits écrans */
+  }
+}

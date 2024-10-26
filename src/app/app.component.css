@@ -1,0 +1,116 @@
+/* Évite les débordements horizontaux en activant le rognage sur les petits écrans */
+* {
+  box-sizing: border-box;
+}
+
+:host {
+  display: block;
+  font-family: "Inter", sans-serif;
+  color: #e5e5e5; /* Texte clair pour un bon contraste */
+}
+
+/* Mise en page principale */
+main {
+  background: linear-gradient(135deg, #2e2e2e, #3a3a3a);
+}
+
+.main-content {
+  margin-left: 270px; /* Décalage pour un sidebar */
+  max-width: 1000px; /* Limite la largeur pour une lecture plus agréable */
+
+  padding-left: 1rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Contenu et sections */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+section {
+  padding: 2rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.divider {
+  height: 2px;
+  background: linear-gradient(90deg, #ff007f, #ff6600);
+  border-radius: 1px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  color: #999999;
+  font-size: 14px;
+}
+
+/* Media Queries pour la Responsivité */
+@media (max-width: 1200px) {
+  .main-content {
+    margin-left: 290px;
+  }
+
+  .nav-links a {
+    padding: 6px 12px;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 240px;
+  }
+  nav {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-links a {
+    width: 100%; /* Les liens prennent toute la largeur disponible */
+    padding: 8px 0; /* Ajustement du padding */
+    margin: 0; /* Supprime les marges potentielles */
+    box-sizing: border-box;
+  }
+
+  section {
+    padding: 1rem; /* Ajustement du padding pour éviter l'excès */
+    margin: 0; /* Supprime les marges latérales */
+  }
+}
+
+/* Évite les débordements pour les autres sections */
+section,
+header,
+footer,
+.content {
+  max-width: 100%; /* Limite la largeur pour éviter les débordements */
+  box-sizing: border-box;
+  overflow-x: hidden;
+}

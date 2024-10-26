@@ -1,0 +1,14 @@
+<div class="portfolio">
+  <h2>Mon Portfolio</h2>
+  <ngb-carousel *ngIf="projects && projects.length > 0">
+    <ng-template ngbSlide *ngFor="let project of projects">
+      <img [src]="project.imageUrl" alt="{{ project.title }}" class="project-image">
+      <div class="carousel-caption">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.description }}</p>
+        <a [href]="project.link" target="_blank" class="btn btn-primary">Voir le projet</a>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+  <div *ngIf="!projects || projects.length === 0">Aucun projet à afficher.</div>
+</div>
