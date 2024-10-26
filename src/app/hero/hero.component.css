@@ -9,7 +9,7 @@
   overflow: hidden;
   color: white;
   z-index: 10;
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(0, 0, 0, 0.64);
 }
 
 .bg-img {
@@ -33,9 +33,12 @@
 .hero-content {
   position: relative;
   z-index: 2;
+  padding: 10px 20px;
+  border-radius: 15px;
   max-width: 600px;
   animation: fadeInContent 1s ease-out forwards 0.5s; /* Début après le fond */
   opacity: 0; /* Commence invisible */
+  background-color: rgba(0, 0, 0, 0.391);
 }
 
 /* Animation pour l'effet d'apparition du fond */

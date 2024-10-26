@@ -18,7 +18,7 @@ export class PortfolioComponent implements OnInit {
       link: 'https://www.louhanemakeupart.fr/',
     },
     {
-      title: 'ElèganceEnRime',
+      title: 'EléganceEnRime',
       description: 'Blog Mode et Musique.',
       imageUrl: 'assets/images/eleganceEnRime.png',
       link: 'https://elegance-en-rime.fr/',

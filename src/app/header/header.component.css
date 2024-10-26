@@ -5,7 +5,7 @@
   left: 0;
   height: 100%;
   width: 290px; /* Largeur par défaut */
-  background: linear-gradient(135deg, #1d1d1d, #2a2a2a);
+  background: linear-gradient(135deg, #121212, #2a2a2a);
   color: #f5f5f5;
   padding: 30px 20px;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
@@ -61,7 +61,7 @@
 }
 
 .sidebar a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #ffd9004d;
   color: #ffffff;
   cursor: pointer;
 }
